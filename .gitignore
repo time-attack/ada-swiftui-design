@@ -1,0 +1,4 @@
+build/
+screenshots/raw/
+.DS_Store
+benchmark/generated/**/*.app

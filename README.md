@@ -7,7 +7,7 @@ Apple's official judging language across all six award categories.
 
 ![hero](renders/collages/hero.png)
 
-*Every image in this repo is a real iOS Simulator render. No mockups.*
+*Eight domains, one doctrine — every image in this repo is a real iOS Simulator render. No mockups.*
 
 ## What's in the skill
 
@@ -75,18 +75,32 @@ Both scripts compile the sources with `swiftc` against the iphonesimulator SDK,
 boot a simulator headless, capture real screenshots, and composite collages with
 a dependency-free CoreGraphics tool.
 
-## Benchmark it against other skills
+## Benchmark vs. 3 real competitor skills — results included
 
-[`claude-code/BENCHMARK_PROMPT.md`](claude-code/BENCHMARK_PROMPT.md) is a
-ready-to-paste Claude Code prompt that:
+[`benchmark/COMPARISON.md`](benchmark/COMPARISON.md) — **10 briefs × 5 variants,
+all 50 apps in [`benchmark/generated/`](benchmark/generated/), all compile-verified.**
+Competitors pinned verbatim with sources in [`benchmark/competitors/`](benchmark/competitors/):
+trilliwon's SwiftUI Cursor rules, harperhhh's swiftui-design skill (LobeHub), and
+wshobson's mobile-ios-design HIG skill.
 
-1. researches 3 real competitor SwiftUI design skills/rules and pins them verbatim,
-2. generates **10 basic apps × 5 variants** (no-guidance baseline, 3 competitors,
-   this skill) with 50 parallel, contamination-free subagents,
-3. compile-gates and renders all 50 on the simulator,
-4. blind-scores everything with [`evals/EVALS.md`](evals/EVALS.md),
-5. writes `benchmark/COMPARISON.md` with side-by-side screenshots, score tables,
-   and an honest weaknesses section for this skill.
+| Variant | Mean score /14 | Character |
+|---|---|---|
+| baseline (no guidance) | 2.5 | gradient-card slop, emoji icons, rainbow stat boxes |
+| trilliwon rules | 6.1 | clean architecture, zero visual opinion — ten settings screens |
+| harperhhh skill | 6.3 | consistent pastel cards, domain-blind, color = mood not meaning |
+| wshobson HIG skill | 7.1 | native-correct, converges everything to the same card list |
+| **ada (this skill)** | **13.6** | scene centerpieces encoding real state, heroes, semantic color |
+
+Render the 50 side-by-side screenshots yourself:
+
+```bash
+bash benchmark/render-bench.sh   # builds all 50, captures real simulator shots, opens RESULTS.html
+```
+
+Want to re-run the whole experiment from scratch (fresh competitor research,
+fresh generations)? [`claude-code/BENCHMARK_PROMPT.md`](claude-code/BENCHMARK_PROMPT.md)
+is a ready-to-paste Claude Code prompt that reproduces the full pipeline with
+parallel, contamination-free subagents and blind scoring.
 
 ## Evals
 

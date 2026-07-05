@@ -9,6 +9,31 @@ Apple's official judging language across all six award categories.
 
 *Eight domains, one doctrine — every image in this repo is a real iOS Simulator render. No mockups.*
 
+## Benchmark results: this skill vs. 3 real SwiftUI design skills
+
+The full competitor comparison is complete and lives in [`benchmark/`](benchmark/). It includes
+**10 briefs × 5 variants = 50 standalone SwiftUI apps**, all compile-verified and rendered from
+real iOS Simulator screenshots. The compared variants are: baseline/no guidance, trilliwon SwiftUI
+Cursor rules, harperhhh swiftui-design skill, wshobson mobile-ios-design skill, and this ADA skill.
+
+**Result:** ada scores **13.6/14 mean** vs. **7.1/14** for the strongest competitor.
+
+| baseline | trilliwon | harperhhh | wshobson | **ada** |
+|---|---|---|---|---|
+| 2.5 | 6.1 | 6.3 | 7.1 | **13.6** |
+
+Jump straight to:
+- [`benchmark/README.md`](benchmark/) — rendered GitHub landing page for the full comparison
+- [`benchmark/COMPARISON.md`](benchmark/COMPARISON.md) — complete score table + all 50 screenshots
+- [`benchmark/screenshots/`](benchmark/screenshots/) — raw simulator renders
+- [`benchmark/generated/`](benchmark/generated/) — all 50 generated SwiftUI source files
+
+Example benchmark row:
+
+| baseline | trilliwon | harperhhh | wshobson | **ada** |
+|---|---|---|---|---|
+| ![baseline](benchmark/screenshots/water-intake-baseline.png) | ![trilliwon](benchmark/screenshots/water-intake-comp-trilliwon.png) | ![harperhhh](benchmark/screenshots/water-intake-comp-harperhhh.png) | ![wshobson](benchmark/screenshots/water-intake-comp-wshobson.png) | ![ada](benchmark/screenshots/water-intake-ada.png) |
+
 ## What's in the skill
 
 Not a theme — a process. The short version:

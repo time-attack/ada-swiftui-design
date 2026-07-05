@@ -18,7 +18,7 @@ render. No mockups.*
 ## Benchmark results: this skill vs. 3 real SwiftUI design skills
 
 The full competitor comparison is complete and lives in [`benchmark/`](benchmark/). It includes
-**10 briefs × 5 variants = 50 standalone SwiftUI apps**, all compile-verified and rendered from
+**11 briefs × 5 variants = 55 standalone SwiftUI apps**, all compile-verified and rendered from
 real iOS Simulator screenshots. The compared variants are: baseline/no guidance, trilliwon SwiftUI
 Cursor rules, harperhhh swiftui-design skill, wshobson mobile-ios-design skill, and this ADA skill.
 
@@ -30,15 +30,19 @@ Cursor rules, harperhhh swiftui-design skill, wshobson mobile-ios-design skill, 
 
 Jump straight to:
 - [`benchmark/README.md`](benchmark/) — rendered GitHub landing page for the full comparison
-- [`benchmark/COMPARISON.md`](benchmark/COMPARISON.md) — complete score table + all 50 screenshots
+- [`benchmark/COMPARISON.md`](benchmark/COMPARISON.md) — complete score table + all 55 screenshots
 - [`benchmark/screenshots/`](benchmark/screenshots/) — raw simulator renders
-- [`benchmark/generated/`](benchmark/generated/) — all 50 generated SwiftUI source files
+- [`benchmark/generated/`](benchmark/generated/) — all 55 generated SwiftUI source files
 
 Example benchmark row:
 
 | baseline | trilliwon | harperhhh | wshobson | **ada** |
 |---|---|---|---|---|
 | ![baseline](benchmark/screenshots/water-intake-baseline.png) | ![trilliwon](benchmark/screenshots/water-intake-comp-trilliwon.png) | ![harperhhh](benchmark/screenshots/water-intake-comp-harperhhh.png) | ![wshobson](benchmark/screenshots/water-intake-comp-wshobson.png) | ![ada](benchmark/screenshots/water-intake-ada.png) |
+
+Newest flight-tracker comparison added after the benchmark run:
+
+![flight tracker comparison triptych](benchmark/twitter-flight.png)
 
 ## What's in the skill
 
@@ -108,8 +112,8 @@ a dependency-free CoreGraphics tool.
 
 ## Benchmark vs. 3 real competitor skills — results included
 
-[`benchmark/COMPARISON.md`](benchmark/COMPARISON.md) — **10 briefs × 5 variants,
-all 50 apps in [`benchmark/generated/`](benchmark/generated/), all compile-verified.**
+[`benchmark/COMPARISON.md`](benchmark/COMPARISON.md) — **11 briefs × 5 variants,
+all 55 apps in [`benchmark/generated/`](benchmark/generated/), all compile-verified.**
 Competitors pinned verbatim with sources in [`benchmark/competitors/`](benchmark/competitors/):
 trilliwon's SwiftUI Cursor rules, harperhhh's swiftui-design skill (LobeHub), and
 wshobson's mobile-ios-design HIG skill.
@@ -122,7 +126,7 @@ wshobson's mobile-ios-design HIG skill.
 | wshobson HIG skill | 7.1 | native-correct, converges everything to the same card list |
 | **ada (this skill)** | **13.6** | scene centerpieces encoding real state, heroes, semantic color |
 
-All 50 screenshots are in the repo — every row below is the same one-line brief
+All 55 screenshots are in the repo — every row below is the same one-line brief
 across all five variants ([full set with scores](benchmark/COMPARISON.md)):
 
 **"Build a SwiftUI screen for tonight's moon phase."**
@@ -152,7 +156,7 @@ across all five variants ([full set with scores](benchmark/COMPARISON.md)):
 Re-render them yourself:
 
 ```bash
-bash benchmark/render-bench.sh   # builds all 50, captures real simulator shots, opens RESULTS.html
+bash benchmark/render-bench.sh   # builds all 55, captures real simulator shots, opens RESULTS.html
 ```
 
 Want to re-run the whole experiment from scratch (fresh competitor research,

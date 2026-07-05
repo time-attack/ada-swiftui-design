@@ -2,7 +2,7 @@
 
 Eleven one-line briefs. Five variants each: a no-guidance **baseline**, three real,
 adopted competitor skills applied verbatim, and **ada** (this repo's skill). All
-50 apps are standalone compilable SwiftUI files in `generated/`, verified against
+55 apps are standalone compilable SwiftUI files in `generated/`, verified against
 the iOS 17 simulator SDK. Screenshots are real simulator captures produced by
 `render-bench.sh` (run it once on a Mac with Xcode; images below populate).
 
@@ -19,7 +19,7 @@ the iOS 17 simulator SDK. Screenshots are real simulator captures produced by
 - Briefs given verbatim; non-baseline variants got exactly one skill text applied
   in full. Each generated file states its brief + variant in a header comment.
 - Compile gate: `swiftc -typecheck -parse-as-library -target arm64-apple-ios17.0-simulator`.
-  **50/50 pass.**
+  **55/55 pass.**
 - Scoring: `../evals/EVALS.md` — 7 dimensions, 0–2 each (max 14), automatic cap
   at 7 for any banned-list violation, compile-fail = 0. Scores below are from
   code audit of each file (every claim is inspectable in the source); run

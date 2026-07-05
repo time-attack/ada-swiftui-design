@@ -5,9 +5,15 @@ produce SwiftUI interfaces that look designed, not generated — distilled from
 visual analysis of **Apple Design Award winners and finalists 2022–2025** and
 Apple's official judging language across all six award categories.
 
-![hero](renders/collages/hero.png)
+Same one-line prompt — *"Build a SwiftUI screen for tonight's moon phase."* —
+same model. Left: no guidance. Right: this skill. Real simulator renders:
 
-*Eight domains, one doctrine — every image in this repo is a real iOS Simulator render. No mockups.*
+![moon phase, baseline vs skill](renders/moon-phase-vs.png)
+
+*Eight more domains below — every image in this repo is a real iOS Simulator
+render. No mockups.*
+
+![hero](renders/collages/hero.png)
 
 ## Benchmark results: this skill vs. 3 real SwiftUI design skills
 
@@ -116,7 +122,34 @@ wshobson's mobile-ios-design HIG skill.
 | wshobson HIG skill | 7.1 | native-correct, converges everything to the same card list |
 | **ada (this skill)** | **13.6** | scene centerpieces encoding real state, heroes, semantic color |
 
-Render the 50 side-by-side screenshots yourself:
+All 50 screenshots are in the repo — every row below is the same one-line brief
+across all five variants ([full set with scores](benchmark/COMPARISON.md)):
+
+**"Build a SwiftUI screen for tonight's moon phase."**
+
+| baseline | trilliwon | harperhhh | wshobson | **ada** |
+|---|---|---|---|---|
+| ![b](benchmark/screenshots/moon-phase-baseline.png) | ![t](benchmark/screenshots/moon-phase-comp-trilliwon.png) | ![h](benchmark/screenshots/moon-phase-comp-harperhhh.png) | ![w](benchmark/screenshots/moon-phase-comp-wshobson.png) | ![a](benchmark/screenshots/moon-phase-ada.png) |
+
+**"Build a SwiftUI screen for tracking a road trip in progress."**
+
+| baseline | trilliwon | harperhhh | wshobson | **ada** |
+|---|---|---|---|---|
+| ![b](benchmark/screenshots/road-trip-baseline.png) | ![t](benchmark/screenshots/road-trip-comp-trilliwon.png) | ![h](benchmark/screenshots/road-trip-comp-harperhhh.png) | ![w](benchmark/screenshots/road-trip-comp-wshobson.png) | ![a](benchmark/screenshots/road-trip-ada.png) |
+
+**"Build a SwiftUI screen for a parking meter timer."**
+
+| baseline | trilliwon | harperhhh | wshobson | **ada** |
+|---|---|---|---|---|
+| ![b](benchmark/screenshots/parking-meter-baseline.png) | ![t](benchmark/screenshots/parking-meter-comp-trilliwon.png) | ![h](benchmark/screenshots/parking-meter-comp-harperhhh.png) | ![w](benchmark/screenshots/parking-meter-comp-wshobson.png) | ![a](benchmark/screenshots/parking-meter-ada.png) |
+
+**"Build a SwiftUI screen for a podcast player."**
+
+| baseline | trilliwon | harperhhh | wshobson | **ada** |
+|---|---|---|---|---|
+| ![b](benchmark/screenshots/podcast-player-baseline.png) | ![t](benchmark/screenshots/podcast-player-comp-trilliwon.png) | ![h](benchmark/screenshots/podcast-player-comp-harperhhh.png) | ![w](benchmark/screenshots/podcast-player-comp-wshobson.png) | ![a](benchmark/screenshots/podcast-player-ada.png) |
+
+Re-render them yourself:
 
 ```bash
 bash benchmark/render-bench.sh   # builds all 50, captures real simulator shots, opens RESULTS.html

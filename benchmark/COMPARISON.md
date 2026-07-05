@@ -1,6 +1,6 @@
-# SwiftUI Design Skill Benchmark — 10 briefs × 5 variants
+# SwiftUI Design Skill Benchmark — 11 briefs × 5 variants
 
-Ten one-line briefs. Five variants each: a no-guidance **baseline**, three real,
+Eleven one-line briefs. Five variants each: a no-guidance **baseline**, three real,
 adopted competitor skills applied verbatim, and **ada** (this repo's skill). All
 50 apps are standalone compilable SwiftUI files in `generated/`, verified against
 the iOS 17 simulator SDK. Screenshots are real simulator captures produced by
@@ -39,6 +39,7 @@ the iOS 17 simulator SDK. Screenshots are real simulator captures produced by
 | pomodoro | 2 † | 6 | 6 † | 7 | **13** |
 | road-trip | 2 † | 6 | 6 † | 7 | **14** |
 | baby-sleep | 3 † | 6 | 7 † | 7 | **13** |
+| flight-tracker | 3 † | 6 | 6 † | 7 | **14** |
 | **mean** | **2.5** | **6.1** | **6.3** | **7.1** | **13.6** |
 
 † = capped at 7 by banned-list violations (score shown is post-cap actual).
@@ -140,6 +141,15 @@ Run once: `bash render-bench.sh` — then these rows are real simulator captures
 | baseline | trilliwon | harperhhh | wshobson | ada |
 |---|---|---|---|---|
 | ![b](screenshots/baby-sleep-baseline.png) | ![t](screenshots/baby-sleep-comp-trilliwon.png) | ![h](screenshots/baby-sleep-comp-harperhhh.png) | ![w](screenshots/baby-sleep-comp-wshobson.png) | ![a](screenshots/baby-sleep-ada.png) |
+
+### flight-tracker
+| baseline | trilliwon | harperhhh | wshobson | ada |
+|---|---|---|---|---|
+| ![b](screenshots/flight-tracker-baseline.png) | ![t](screenshots/flight-tracker-comp-trilliwon.png) | ![h](screenshots/flight-tracker-comp-harperhhh.png) | ![w](screenshots/flight-tracker-comp-wshobson.png) | ![a](screenshots/flight-tracker-ada.png) |
+
+The flight-tracker triptych (baseline / wshobson / ada) is also composed as a
+share-ready image: [`twitter-flight.png`](twitter-flight.png) — regenerate with
+`bash make-twitter-collage.sh`.
 
 ## Findings
 
